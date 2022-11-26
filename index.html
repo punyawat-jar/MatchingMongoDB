@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>h1 {text-align: center;}</style>
+    <script src="otherscript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Matching</h1>
+            
+            <div>
+                <div class="d-flex justify-content-center mb-4">
+                    <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                    class="rounded-circle" alt="example placeholder" style="width: 200px;" />
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="btn btn-primary btn-rounded">
+                        <label class="form-label text-white m-1" for="customFile2">Choose file</label>
+                        <input type="file" class="form-control d-none" id="customFile2" />
+                    </div>
+                </div>
+            </div>
+
+            <form method = 'post' action = "/">
+                <div class="mb-3">
+                  <label for="titlename" class="form-label">Name</label>
+                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name = "username">
+                </div>
+
+                <div class="mb-3">
+                  <label for="ex" class="form-label">Exercise Type</label>
+                  <select class="form-select" name="user_ex">
+                    <option selected>Choose...</option>
+                    <option value="P">Plank</option>
+                    <option value="S">Situp</option>
+                    <option value="R">Running</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="lo" class="form-label">Location</label>
+                    <select class="form-select" name="user_loc">
+                      <option selected>Choose...</option>
+                      <option value="BK">Bangkok</option>
+                      <option value="Nak">Nakhon Pathom</option>
+                      <option value="Non">Nonthaburi</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="lo" class="form-label">Your Sex</label>
+                    <select class="form-select" name="user_sex">
+                      <option selected>Choose...</option>
+                      <option value="M">Man</option>
+                      <option value="W">Woman</option>
+                      <option value="O">Others</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="lo" class="form-label">Prefer with</label>
+                    <select class="form-select" name="user_prefer">
+                      <option selected>Choose...</option>
+                      <option value="Man">Man</option>
+                      <option value="Woman">Woman</option>
+                      <option value="Others">Others</option>
+                    </select>
+                </div>
+
+                <!-- <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div> -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>
