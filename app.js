@@ -8,10 +8,9 @@ const http = require('http');
 const server = http.createServer(app);
 const path = require('path');
 const bodyParser = require('body-parser');
-const ejs = require('ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.set('view engin','ejs');
+
 mongoose.connect(url,{useNewUrlParser: true},{useUnifiedTopology : true},{serverApi: ServerApiVersion.v1})
 const notesSchema = {
     name: String,
