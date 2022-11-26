@@ -8,7 +8,10 @@ const http = require('http');
 const server = http.createServer(app);
 const path = require('path');
 const bodyParser = require('body-parser');
+
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
+
 
 mongoose.connect(url,{useNewUrlParser: true},{useUnifiedTopology : true},{serverApi: ServerApiVersion.v1})
 const notesSchema = {
@@ -26,6 +29,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 
+app.use(express.static(__dirname + '/Page'));
+
+app.get('/match.html', function(req, res) {
+    res.sendFile(path.join(__dirname, '/match.html'));
+});
+
 app.post("/",function(req,res){
     let newNote = new Note({
         name: req.body.username,
@@ -35,8 +44,10 @@ app.post("/",function(req,res){
         prefer: req.body.user_prefer
     })
     newNote.save();
-    res.redirect('/')
+    res.redirect('/match.html')
 })
+
+
 
 server.listen(3000, () => {
   console.log('listening on *:3000');
