@@ -48,7 +48,7 @@
         <div class="mb-3">
           <label for="ex" class="form-label">Exercise Type</label>
           <select class="form-select" name="user_ex" id = "user_ex">
-            <option selected disabled value="0">Choose...</option>
+            <option selected disabled value="-">Choose...</option>
             <option value="Plank">Plank</option>
             <option value="Situp">Situp</option>
             <option value="Running">Running</option>
@@ -58,7 +58,7 @@
         <div class="mb-3">
           <label for="lo" class="form-label">Location</label>
           <select class="form-select" name="user_loc" id ='user_loc'>
-            <option selected disabled value="0">Choose...</option>
+            <option selected disabled value="-">Choose...</option>
             <option value="Bangkok">Bangkok</option>
             <option value="Nakhon Pathom">Nakhon Pathom</option>
             <option value="Nonthaburi">Nonthaburi</option>
@@ -68,7 +68,7 @@
         <div class="mb-3">
           <label for="lo" class="form-label">Your Sex</label>
           <select class="form-select" name="user_sex" id = 'user_sex'>
-            <option selected disabled value="0">Choose...</option>
+            <option selected disabled value="-">Choose...</option>
             <option value="Man">Man</option>
             <option value="Woman">Woman</option>
             <option value="Others">Others</option>
@@ -78,7 +78,7 @@
         <div class="mb-3">
           <label for="lo" class="form-label">Prefer with</label>
           <select class="form-select" name="user_prefer" id = 'user_prefer'>
-            <option selected disabled value="0">Choose...</option>
+            <option selected disabled value="-">Choose...</option>
             <option value="Man">Man</option>
             <option value="Woman">Woman</option>
             <option value="Others">Others</option>
@@ -102,7 +102,6 @@
 
 
   form.addEventListener('submit',function(e){
-    e.preventDefault();
     const unameValue = uname.value;
     const uexValue = uex.value;
     const ulocValue = uloc.value;
@@ -115,7 +114,7 @@
     localStorage.setItem('userprefer-result',uPreValue);
 
 
-    window.location.href = 'match.html';
+    window.location.href = '/';
   });
 
 </script>

@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <script defer src="otherjs.js"></script>
     <style>h1 {text-align: center; }</style>
 
 
@@ -32,27 +31,12 @@
                   </div>
             </div>
             <div class="col">
-                
+                <img src="https://avatars.dicebear.com/api/adventurer-neutral/mail%40ashallendesign.co.uk.svg" class="rounded-circle" alt="example placeholder" style="width: 200px;">
                 <div>
-                    <img src="https://avatars.dicebear.com/api/adventurer-neutral/mail%40ashallendesign.co.uk.svg" class="rounded-circle" alt="example placeholder" style="width: 200px;">
-                      <br>
-                      <br>
-                      <label for="titlename" class="form-label">Name: <span id = "ran_name"></span></label>
-                      <br>
-                      <label for="titlename" class="form-label">Exercise Type: <span id = "ran_ex"></span></label>
-                      <br>
-                      <label for="titlename" class="form-label">Location: <span id = "result-loc2"></span></label>
-                      <br>
-                      <label for="titlename" class="form-label">Sex: <span id = "result-pre2"></span></label>
-                    </div>
+                    <h1>Hello world</h1>
                 </div>
             </div>
-            
         </div>
-        <div class="col-md-12 text-center">
-            <button type="button" class="btn btn-primary" onclick="window.location.href='/'">Back to match</button>
-        </div>
-        
     </div>
 </body>
 
@@ -66,32 +50,6 @@
     document.getElementById('result-ex').textContent = user_ex;
     document.getElementById('result-loc').textContent = user_loc;
     document.getElementById('result-pre').textContent = user_pre;
-    
-    
-
-    var ranname = ['Alex', 'Tom', 'James','Bob','Alice','Steve'];
-    var ranex = ['Plank', 'Situp', 'Running'];
-    var ranloc = ['Bangkok','Nakhon Pathom','Nonthaburi'];
-    var ransex = ['Man','Woman','Other'];
-
-    document.getElementById('ran_name').textContent = ranname[Math.floor(Math.random()*ranname.length)];
-    document.getElementById('ran_ex').textContent = ranex[Math.floor(Math.random()*ranex.length)];
-    if(user_loc == '-'){
-        document.getElementById('result-loc2').textContent = ranloc[Math.floor(Math.random()*ranloc.length)];
-    }
-    else{
-        document.getElementById('result-loc2').textContent = user_loc;
-    }
-    if(user_pre == '-'){
-        document.getElementById('result-pre2').textContent = ransex[Math.floor(Math.random()*ransex.length)];
-    }
-    else{
-        document.getElementById('result-pre2').textContent = user_pre;
-    }
-    
-    
-    
-     
 </script>
 
 </html>
